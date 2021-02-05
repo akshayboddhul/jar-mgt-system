@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  font-family: 'Muli', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: crimson;
+  padding: 60px;
+}
+.heading {
+  text-align: center;
+  margin: 0;
+  color: aliceblue;
+}
+.author-name {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  border: none;
+  padding: 5px 10px;
+  outline-style: none;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  max-width: 200px;
+}
+
+.jar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jar-section {
+  background-color: darkslategray;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: aliceblue;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+.jar-section p {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+.jar-amt {
+  font-size: 32px;
+  font-weight: bold;
+}
+.jar-section h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cal-btn {
+  background-color: darkblue;
+  padding: 10px 20px;
+  color: aliceblue;
+  border-radius: 20px;
+  outline-style: none;
+  border: none;
+  margin: 0 20px;
+}
