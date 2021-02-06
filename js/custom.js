@@ -2,11 +2,7 @@ let amount = document.getElementById('amt')
 const calBtn = document.getElementById('cal')
 const clearBtn = document.getElementById('clear')
 
-const total = document.getElementById('total-amt')
-
-document.getElementById("amt").focus();
-
-
+let total = document.getElementById('total-amt')
 
 let jar1Label = document.getElementById('jar1-amt')
 let jar2Label = document.getElementById('jar2-amt')
@@ -26,24 +22,24 @@ function calculateMoney3(amount){
     return  (amount.value * 05 ) / 100
 }
 
-calBtn.addEventListener('click', () => {
-    const jar1 = calculateMoney1(amount)
-    const jar2 = calculateMoney2(amount)
-    const jar3 = calculateMoney2(amount)
-    const jar4 = calculateMoney2(amount)
-    const jar5 = calculateMoney2(amount)
-    const jar6 = calculateMoney3(amount)
-    // x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    jar1Label.innerHTML = jar1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
-    jar2Label.innerHTML = jar2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
-    jar3Label.innerHTML = jar3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
-    jar4Label.innerHTML = jar4.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
-    jar5Label.innerHTML = jar5.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
-    jar6Label.innerHTML = jar6.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
-
-    total.innerHTML = (jar1 + jar2 + jar3 + jar4 + jar5 + jar6).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-" 
-
+amount.addEventListener('keyup', () => {
+        const jar1 = calculateMoney1(amount)
+        const jar2 = calculateMoney2(amount)
+        const jar3 = calculateMoney2(amount)
+        const jar4 = calculateMoney2(amount)
+        const jar5 = calculateMoney2(amount)
+        const jar6 = calculateMoney3(amount)
+        // x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        jar1Label.innerHTML = jar1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
+        jar2Label.innerHTML = jar2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
+        jar3Label.innerHTML = jar3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
+        jar4Label.innerHTML = jar4.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
+        jar5Label.innerHTML = jar5.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
+        jar6Label.innerHTML = jar6.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-"
     
+        let sum = jar1 + jar2 + jar3 + jar4 + jar5 + jar6
+        
+        total.innerHTML = (sum.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "/-" 
 })
 
 
