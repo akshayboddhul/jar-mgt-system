@@ -6,24 +6,42 @@
 }
 
 body {
+  background-color: azure;
+}
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 100px;
 }
 
-.container {
-  background-color: crimson;
-  padding: 60px;
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
-.heading {
-  text-align: center;
-  margin: 0;
+
+.amount {
+  background-color: rgb(28, 0, 80);
+  padding: 15px 20px;
+  border: none;
+  font-family: inherit;
+  font-size: 34px;
   color: aliceblue;
-}
-.author-name {
+  border-radius: 50px;
   text-align: center;
-  color: white;
-  margin-bottom: 20px;
+}
+
+.amount::placeholder {
+  font-size: 24px;
+  font-family: inherit;
+}
+
+.amount:focus {
+  outline: none;
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -32,72 +50,32 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-input[type='number'] {
-  border: none;
-  padding: 5px 10px;
-  outline-style: none;
-  border-radius: 20px;
-  font-size: 24px;
-  font-weight: 700;
-  max-width: 200px;
-}
-
-.jar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jar-section {
-  background-color: darkslategray;
-  margin: 0 10px;
-  padding: 20px;
+.jar {
+  background-color: #fff;
+  color: #636363;
+  font-family: inherit;
   text-align: center;
-  border-radius: 10px;
-  color: aliceblue;
+  width: 250px;
+  height: 250px;
+  margin: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.1);
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
-.jar-section p {
-  font-size: 20px;
-  font-weight: 400;
-  padding-top: 20px;
+.jar h2 {
+  font-size: 3.5rem;
+  margin-top: 0;
+  padding-top: 50px;
+  color: rgb(43, 43, 43);
 }
 
-.jar-amt {
-  font-size: 32px;
-  font-weight: bold;
-}
-.jar-section h3 {
-  font-size: 32px;
-  font-weight: bold;
+.jar span {
+  font-size: 1.4rem;
 }
 
-.cal-btn {
-  background-color: darkblue;
-  padding: 10px 20px;
-  color: aliceblue;
-  border-radius: 20px;
-  outline-style: none;
-  border: none;
-  margin-left: 10px;
-}
-.clear-btn {
-  background-color: rgb(6, 6, 14);
-  padding: 10px 20px;
-  color: aliceblue;
-  border-radius: 20px;
-  outline-style: none;
-  border: none;
-  margin: 0 20px;
+.jar h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
